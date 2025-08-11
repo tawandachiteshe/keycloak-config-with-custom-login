@@ -8,6 +8,7 @@ services:
       KC_DB_USERNAME: postgres
       KC_DB_PASSWORD: password
       KEYCLOAK_ADMIN: admin
+      KC_HTTP_ENABLED: true
       KEYCLOAK_ADMIN_PASSWORD: admin
     labels:
       - "traefik.enable=true"
