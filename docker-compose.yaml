@@ -15,10 +15,10 @@ services:
       PROXY_ADDRESS_FORWARDING: 'true'
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.bans.rule=Host(`keycloak.umbiro.com`)"
-      - "traefik.http.routers.bans.entrypoints=websecure"
-      - "traefik.http.routers.bans.tls.certresolver=letsencrypt"
-      - "traefik.http.services.bans.loadbalancer.server.port=8000"
+      - "traefik.http.routers.keycloak.rule=Host(`keycloak.umbiro.com`)"
+      - "traefik.http.routers.keycloak.entrypoints=websecure"
+      - "traefik.http.routers.keycloak.tls.certresolver=letsencrypt"
+      - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
     networks:
       - dokploy-network
     depends_on:
