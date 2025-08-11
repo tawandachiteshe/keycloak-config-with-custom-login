@@ -8,9 +8,11 @@ services:
       KC_DB_USERNAME: postgres
       KC_DB_PASSWORD: password
       KEYCLOAK_ADMIN: admin
-      KC_HTTP_ENABLED: true
+      KC_HTTP_ENABLED: 'true'
       KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_PROXY_HEADERS: xforwarded
+      KC_PROXY_HEADERS: 'xforwarded'
+      KC_HOSTNAME: 'keycloak.umbiro.com'
+      PROXY_ADDRESS_FORWARDING: 'true'
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.bans.rule=Host(`keycloak.umbiro.com`)"
