@@ -1,6 +1,6 @@
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:latest # Or a specific version
+    image: keycloak/keycloak:latest # Or a specific version
     command: start # Or 'start' for production
     environment:
       KC_DB: postgres
@@ -33,7 +33,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=xbeef
+      - POSTGRES_DB=keycloak
       - TZ=Africa/Harare
 
 volumes:
