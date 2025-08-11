@@ -13,6 +13,8 @@ services:
       KC_PROXY_HEADERS: 'xforwarded'
       KC_HOSTNAME: 'keycloak.umbiro.com'
       PROXY_ADDRESS_FORWARDING: 'true'
+    ports:
+      - 8080:8080
     networks:
       - dokploy-network
     depends_on:
