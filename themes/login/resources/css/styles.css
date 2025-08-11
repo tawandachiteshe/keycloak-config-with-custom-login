@@ -1,0 +1,372 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5faf5;
+  color: #2b4d2b;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alert-error {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  text-align: center;
+}
+
+
+#kc-logo-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+#kc-logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: 250px;
+  user-select: none;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Login title styling */
+#kc-page-title {
+  font-size: 1rem;
+  font-weight: 700;
+  /* dark green */
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+/* Realm name styling */
+#kc-header {
+  font-size: 1.25rem;
+  font-weight: 500;
+  /* medium green */
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  display: none;
+}
+
+#kc-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgb(0 64 0 / 0.1);
+  padding: 2rem 2.5rem;
+}
+
+#kc-form-wrapper {
+  width: 100%;
+}
+
+/* kc-form-group is the wrapper for each form group */
+.kc-form-group {
+  margin-bottom: 1.25rem;
+}
+
+/* kc-label for labels */
+.kc-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #276627;
+  font-size: 0.95rem;
+}
+
+/* kc-input is the class for inputs */
+.kc-input {
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #81c784;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.kc-input:focus {
+  outline: none;
+  border-color: #388e3c;
+  box-shadow: 0 0 5px #4caf50;
+}
+
+/* kc-input-group wraps password input and button */
+.kc-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Button to toggle password visibility */
+.kc-form-password-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  margin-left: -2.5rem;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+}
+
+.kc-form-password-toggle:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+
+/* Input error message styling */
+.kc-input-error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Form options container (remember me, forgot password) */
+.kc-form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Checkbox styling */
+.checkbox label {
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Wrapper for form option links like forgot password */
+.kc-form-options-wrapper a {
+  font-size: 0.9rem;
+  color: #388e3c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kc-form-options-wrapper a:hover,
+#kc-registration a:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
+
+/* Submit button styles */
+.kc-button.kc-button-primary.kc-button-block.kc-button-large {
+  width: 100%;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kc-button.kc-button-primary.kc-button-block.kc-button-large:disabled,
+.kc-button.kc-button-primary.kc-button-block.kc-button-large[disabled] {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.kc-button.kc-button-primary.kc-button-block.kc-button-large:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+/* Registration info container */
+#kc-registration-container {
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+
+#kc-registration-container a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#kc-registration-container a:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
+
+/* Social providers container */
+#kc-social-providers {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#kc-social-providers hr {
+  border: none;
+  border-top: 1px solid #c8e6c9;
+  margin-bottom: 1rem;
+}
+
+#kc-social-providers h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #276627;
+  margin-bottom: 1rem;
+}
+
+/* Social accounts list */
+.kc-form-social-account-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Social provider button */
+.kc-form-social-account-list-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e8f5e9;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.kc-form-social-account-list-button:hover {
+  background-color: #c8e6c9;
+  border-color: #4caf50;
+  color: #1b5e20;
+}
+
+/* Icon for social providers */
+.kc-common-logo-idp {
+  font-size: 1.25rem;
+  color: #388e3c;
+}
+
+/* Text beside social icons */
+.kc-form-social-account-name {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+
+  #kc-form,
+  #kc-registration-container,
+  #kc-social-providers {
+    margin: 1rem 1rem;
+    width: auto;
+  }
+
+  .kc-form-social-account-list {
+    flex-direction: column;
+  }
+}
+
+
+/* Extra mobile responsiveness */
+@media (max-width: 768px) {
+
+  body,
+  html {
+    font-size: 15px;
+  }
+
+  #kc-logo {
+    max-width: 280px;
+    max-height: 180px;
+  }
+
+  #kc-page-title {
+    font-size: 1.2rem;
+  }
+
+  #kc-form {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 64, 0, 0.08);
+  }
+
+  .kc-button.kc-button-primary.kc-button-block.kc-button-large {
+    font-size: 1rem;
+    padding: 0.65rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  body,
+  html {
+    font-size: 14px;
+  }
+
+  #kc-logo {
+    max-width: 200px;
+    max-height: 140px;
+  }
+
+  #kc-page-title {
+    font-size: 1rem;
+  }
+
+  #kc-form {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .kc-form-options {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .kc-form-options-wrapper {
+    width: 100%;
+  }
+
+  /* Make social buttons full-width on very small screens */
+  .kc-form-social-account-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .kc-form-social-account-list-button {
+    justify-content: center;
+    width: 100%;
+  }
+}
