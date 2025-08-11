@@ -10,6 +10,7 @@ services:
       KEYCLOAK_ADMIN: admin
       KC_HTTP_ENABLED: true
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_PROXY_HEADERS: xforwarded
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.bans.rule=Host(`keycloak.umbiro.com`)"
