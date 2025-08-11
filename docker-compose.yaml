@@ -11,7 +11,7 @@ services:
       KC_HTTP_ENABLED: 'true'
       KEYCLOAK_ADMIN_PASSWORD: admin
       KC_PROXY_HEADERS: 'xforwarded'
-      KC_HOSTNAME: 'keycloak.umbiro.com'
+      KC_HOSTNAME: 'auth.umbiro.com'
       PROXY_ADDRESS_FORWARDING: 'true'
     ports:
       - 8080:8080
