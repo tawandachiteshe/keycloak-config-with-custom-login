@@ -13,12 +13,6 @@ services:
       KC_PROXY_HEADERS: 'xforwarded'
       KC_HOSTNAME: 'keycloak.umbiro.com'
       PROXY_ADDRESS_FORWARDING: 'true'
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.keycloak.rule=Host(`keycloak.umbiro.com`)"
-      - "traefik.http.routers.keycloak.entrypoints=websecure"
-      - "traefik.http.routers.keycloak.tls.certresolver=letsencrypt"
-      - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
     networks:
       - dokploy-network
     depends_on:
@@ -31,7 +25,7 @@ services:
   postgres:
     image: ghcr.io/baosystems/postgis:16-3.5
     volumes:
-      - keycloak_data:/var/lib/postgresql/data
+      - keycloak_data_bans:/var/lib/postgresql/data
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     environment:
@@ -48,7 +42,7 @@ services:
       retries: 1
 
 volumes:
-  keycloak_data:
+  keycloak_data_bans:
 networks:
   dokploy-network:
     external: true
