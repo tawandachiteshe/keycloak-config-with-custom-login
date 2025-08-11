@@ -35,6 +35,11 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=keycloak
       - TZ=Africa/Harare
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -U postgres -d keycloak"]
+      interval: 5s
+      timeout: 5s
+      retries: 1
 
 volumes:
   keycloak_data:
