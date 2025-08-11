@@ -1,7 +1,7 @@
 services:
   keycloak:
     image: keycloak/keycloak:latest # Or a specific version
-    command: start # Or 'start' for production
+    command: start --optimized # Or 'start' for production
     environment:
       KC_DB: postgres
       KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
