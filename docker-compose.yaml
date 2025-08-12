@@ -24,7 +24,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - ./themes:/opt/keycloak/themes/bans-green:ro
+      # - ./themes:/opt/keycloak/themes/bans-green:ro
   postgres:
     image: ghcr.io/baosystems/postgis:16-3.5
     volumes:
