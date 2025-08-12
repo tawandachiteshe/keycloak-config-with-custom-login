@@ -1,4 +1,5 @@
 services:
+
   keycloak:
     image: keycloak/keycloak:latest # Or a specific version
     command: start # Or 'start' for production
